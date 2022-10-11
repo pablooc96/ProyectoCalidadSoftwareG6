@@ -9,7 +9,7 @@ package com.grupo6;
  *
  * @author User
  */
-public class Demo1 {
+public class Demo {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
