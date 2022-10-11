@@ -1,17 +1,45 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
-
 package com.grupo6;
 
-/**
- *
- * @author User
- */
-public class Demo {
+import static org.junit.Assert.assertEquals;
+import org.junit.After;
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+import java.util.concurrent.TimeUnit;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class Demo {
+    
+    private WebDriver driver;
+    
+    @Before
+    public void setUp()
+    {
+        System.setProperty("webdriver.chrome.driver", "./Selenium/src/test/chromedriver/chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://www.google.com/");
+        
+    }
+    
+    @Test
+    public void testPagina()
+    {
+        WebElement searchbox = driver.findElement(By.name("q"));
+        searchbox.clear();
+        searchbox.sendKeys("Introduccion a QS");
+        searchbox.submit();
+        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+        assertEquals("Introduccion a QS", driver.getTitle());
+    }
+    
+    @After
+    public void tearDown()
+    {
+        driver.quit();
     }
 }
