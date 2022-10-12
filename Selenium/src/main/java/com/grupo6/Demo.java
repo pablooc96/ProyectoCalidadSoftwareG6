@@ -22,7 +22,7 @@ public class Demo {
         System.setProperty("webdriver.chrome.driver", "./Selenium/src/test/chromedriver/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://www.google.com/");
+        driver.get("https://www.mopt.go.cr/wps/portal/Home/inicio/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziPQPcDQy9TQx83A3dDA0cAx0NgoNdjYwNjEz0w8EKDHAARwP9KEL6o8BK0PU5BRk5GRsYuPsbYVWAYkVBboRBpqOiIgBXk8By/dz/d5/L2dBISEvZ0FBIS9nQSEh/");
         
     }
     
