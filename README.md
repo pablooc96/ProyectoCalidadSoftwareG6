@@ -1,4 +1,4 @@
-# ProyectoCalidadSoftwareG6
+# Proyecto Calidad Software Grupo 6
 Proyecto de Caildad del Software para Demo en Selenium
 Participantes:
 - Jose Pablo Oconitrillo Cascante
